@@ -55,12 +55,19 @@
 
 package com.p0n0marenk0;
 
+import dao.CarDao;
 import entity.Car;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class Main {
 
 
     public static void main(String[] args) {
-
+        CarDao carDao = new CarDao();
+        Car car = new Car();
+        int id = carDao.findAll().get(5).getId();
+        System.out.println(id);
     }
 }

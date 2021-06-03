@@ -30,11 +30,10 @@ public class CarDao {
         ) {
             while (resultSet.next()) {
                 Car car = new Car();
-                car.setId(resultSet.getInt("Car.car_id"));
-                car.setBrand(resultSet.getString("Car.car_brand"));
-                car.setColor(resultSet.getString("Car.car_color"));
+                car.setColor(resultSet.getString("car_color"));
+                car.setId(resultSet.getInt("car_id"));
+                car.setBrand(resultSet.getString("car_brand"));
                 cars.add(car);
-                System.out.println(cars.toString());
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
